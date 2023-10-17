@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 226070869}
   - component: {fileID: 226070868}
   - component: {fileID: 226070867}
+  - component: {fileID: 226070871}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -729,6 +730,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &226070871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226070866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604ec6f01cc2cae45a39b47379748145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235115373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1037,7 @@ GameObject:
   - component: {fileID: 463510856}
   - component: {fileID: 463510858}
   - component: {fileID: 463510857}
+  - component: {fileID: 463510859}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -1118,6 +1132,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463510855}
   m_CullTransparentMesh: 1
+--- !u!114 &463510859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463510855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ec90583fb032445b48f0e2c1403763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerBlocks:
+  - {fileID: 1159274773}
+  - {fileID: 1838392796}
+  - {fileID: 2028678697}
+  - {fileID: 1384538512}
+  - {fileID: 1845013330}
+  - {fileID: 946184459}
+  - {fileID: 747690749}
+  - {fileID: 716353145}
+  happyBlocks:
+  - {fileID: 1205499761}
+  - {fileID: 1674358033}
+  - {fileID: 934924883}
+  - {fileID: 1687032850}
+  - {fileID: 743513199}
+  - {fileID: 1176653939}
+  - {fileID: 1234390768}
+  - {fileID: 1266709231}
+  hygieneBlocks:
+  - {fileID: 1579155922}
+  - {fileID: 556922236}
+  - {fileID: 1830664205}
+  - {fileID: 2132268161}
+  - {fileID: 194944516}
+  - {fileID: 1969692900}
+  - {fileID: 235115375}
+  - {fileID: 390882858}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1479,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 531140238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725269112}
+        m_TargetAssemblyTypeName: HomeInteractions, Assembly-CSharp
+        m_MethodName: EatFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &531140238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1547,7 +1612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 548973903}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 226070871}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: GoHunt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &548973903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,7 +1820,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 652157572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 226070871}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: GoPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &652157572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,6 +1956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725269110}
   - component: {fileID: 725269111}
+  - component: {fileID: 725269112}
   m_Layer: 5
   m_Name: Interactions
   m_TagString: Untagged
@@ -1907,6 +1997,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725269109}
   m_CullTransparentMesh: 1
+--- !u!114 &725269112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725269109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb0089a5cf38ac47aca0845025942d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsPanel: {fileID: 463510855}
+  alertText: {fileID: 1901553350}
+  alertNum: 3
 --- !u!1 &728410827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 879684011}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725269112}
+        m_TargetAssemblyTypeName: HomeInteractions, Assembly-CSharp
+        m_MethodName: SeeInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &879684011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3368,7 +3485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Explore
+  m_text: clean
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -3872,7 +3989,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1469939202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725269112}
+        m_TargetAssemblyTypeName: HomeInteractions, Assembly-CSharp
+        m_MethodName: CloseInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1469939202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3999,7 +4128,7 @@ GameObject:
   - component: {fileID: 1619115874}
   - component: {fileID: 1619115873}
   m_Layer: 5
-  m_Name: WalkButton
+  m_Name: CleanButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4068,7 +4197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1619115874}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725269112}
+        m_TargetAssemblyTypeName: HomeInteractions, Assembly-CSharp
+        m_MethodName: CleanUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1619115874
 MonoBehaviour:
   m_ObjectHideFlags: 0
