@@ -4,33 +4,31 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    DiscreteMovement movement;
-    [SerializeField] float speed = 1f;
+    PhysicsMovement movement;
 
     private void Awake()
     {
-        movement = GetComponent<DiscreteMovement>();
+        movement = GetComponent<PhysicsMovement>();
     }
 
-
-    void Update()
+    void FixedUpdate()
     {
         Vector3 vel = Vector3.zero;
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            vel.x = 1 * speed;
-        } else if (Input.GetKeyDown(KeyCode.A))
+            vel.x = 1;
+        } if (Input.GetKey(KeyCode.A))
         {
-            vel.x = -1 * speed;
-        } else if (Input.GetKeyDown(KeyCode.W))
+            vel.x = -1;
+        } if (Input.GetKey(KeyCode.W))
         {
-            vel.y = 1 * speed;
-        } else if (Input.GetKeyDown(KeyCode.S))
+            vel.y = 1;
+        } if (Input.GetKey(KeyCode.S))
         {
-            vel.y = -1 * speed;
+            vel.y = -1;
         }
 
-        movement.MoveTransform(vel);
+        movement.MoveCharacter(vel);
     }
 }

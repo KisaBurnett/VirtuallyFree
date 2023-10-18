@@ -12,7 +12,10 @@ public class MainMenuButtons : MonoBehaviour
     // Pause the drain timer.
     public void Start()
     {
-        PlayerStats.Instance.notPaused = false;
+        if (PlayerStats.Instance.notPaused)
+        {
+            PlayerStats.Instance.notPaused = false;
+        }
     }
     
     // Start the game by routing player to the Home scene.

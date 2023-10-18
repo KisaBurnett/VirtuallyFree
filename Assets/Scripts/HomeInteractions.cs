@@ -28,7 +28,10 @@ public class HomeInteractions : MonoBehaviour
     // Start the drain timer.
     public void Start()
     {
-        PlayerStats.Instance.notPaused = true;
+        if (!PlayerStats.Instance.notPaused)
+        {
+            PlayerStats.Instance.notPaused = true;
+        }
     }
 
     // PLACEHOLDER Bring up eating menu.
