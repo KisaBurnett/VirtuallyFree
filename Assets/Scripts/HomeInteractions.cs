@@ -37,6 +37,7 @@ public class HomeInteractions : MonoBehaviour
     // PLACEHOLDER Bring up eating menu.
     public void EatFood()
     {
+        PlayerStats.Instance.hunger += 1;
         Debug.Log("I'm eating now!");
     }
 
