@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] int drainHungerSpeed = 60;
     [SerializeField] int drainHappySpeed = 120;
     public int level = 1;
+    public int playerHP = 20;
 
     public bool notPaused = false;
     public bool isDead = false;

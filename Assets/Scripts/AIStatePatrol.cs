@@ -13,7 +13,7 @@ public class AIStatePatrol : AIState
 
     void GenerateRandomVel()
     {
-        vel = Vector3.Normalize(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)));
+        vel = Vector3.Normalize(new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f)));
     }
 
     public override void UpdateState()
@@ -24,7 +24,7 @@ public class AIStatePatrol : AIState
             GenerateRandomVel();
         }
 
-        ai.movement.MoveCharacter(vel);
+        ai.movement.MoveToward(vel);
 
         if (ai.CanSeeTarget())
         {

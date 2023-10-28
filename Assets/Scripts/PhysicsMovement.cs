@@ -17,10 +17,10 @@ public class PhysicsMovement : MonoBehaviour
         rb.velocity = velocity * charSpeed;
         if(velocity.x > 0)
         {
-            transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
-        } else if (velocity.x < 0)
+            transform.localScale = new Vector3(-1.5f, 1.5f, 1f);
+        } else if (velocity.x <= 0)
         {
-            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         }
     }
 

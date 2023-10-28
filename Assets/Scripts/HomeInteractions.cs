@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class HomeInteractions : MonoBehaviour
 {
     [SerializeField] GameObject statsPanel;
+    [SerializeField] GameObject eatMenu;
     [SerializeField] GameObject alertText;
 
     [SerializeField] int alertNum;
@@ -37,11 +38,17 @@ public class HomeInteractions : MonoBehaviour
     // PLACEHOLDER Bring up eating menu.
     public void EatFood()
     {
-        PlayerStats.Instance.hunger += 1;
-        Debug.Log("I'm eating now!");
+        // Should now go in the place where you click food: PlayerStats.Instance.hunger += 1;
+        eatMenu.SetActive(true);
     }
 
-    // PLACEHOLDER Bring up cleaning menu..
+    // Close eating menu.
+    public void CloseFood()
+    {
+        eatMenu.SetActive(false);
+    }
+
+    // PLACEHOLDER Bring up cleaning menu.
     public void CleanUp()
     {
         Debug.Log("I'm cleaning now!");

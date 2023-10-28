@@ -21,7 +21,7 @@ public class StateAI : MonoBehaviour
         patrolState = new AIStatePatrol(this);
         chaseState = new AIStateChase(this);
 
-        ChangeState(waitState);
+        ChangeState(patrolState);
     }
 
     public void ChangeState(AIState newState)
