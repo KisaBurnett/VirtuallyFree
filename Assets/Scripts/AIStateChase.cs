@@ -13,7 +13,13 @@ public class AIStateChase : AIState
 	{
 		if (ai.CanSeeTarget())
 		{
-			ai.movement.MoveToward(ai.targetTransform.position);
+            if (!ai.enemyInfo.isHit)
+            {
+				ai.movement.MoveToward(ai.targetTransform.position);
+			} else
+            {
+				ai.movement.Stop();
+            }
 		}
 		else
 		{

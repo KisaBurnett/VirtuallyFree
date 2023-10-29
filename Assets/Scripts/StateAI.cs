@@ -6,8 +6,11 @@ public class StateAI : MonoBehaviour
 {
     public PhysicsMovement movement;
     public Transform targetTransform;
+    public EnemyStats enemyInfo;
     public float viewRadius;
     AIState currentState;
+
+    GameObject targetObject;
 
     public AIStateWait waitState;
     public AIStatePatrol patrolState;
@@ -15,8 +18,11 @@ public class StateAI : MonoBehaviour
 
     void Start()
     {
+        targetObject = GameObject.FindGameObjectWithTag("Player");
+        targetTransform = targetObject.transform;
         movement = GetComponent<PhysicsMovement>();
-
+        enemyInfo = GetComponent<EnemyStats>();
+        
         waitState = new AIStateWait(this);
         patrolState = new AIStatePatrol(this);
         chaseState = new AIStateChase(this);

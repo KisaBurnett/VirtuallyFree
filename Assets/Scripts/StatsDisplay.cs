@@ -1,10 +1,11 @@
+// Based on code by Blackthornprod on YouTube in their video:
+// "HOW TO MAKE HEART/HEALTH SYSTEM - UNITY TUTORIAL"
+// https://www.youtube.com/watch?v=3uyolYVsiWc
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-// Based on code by Blackthornprod on YouTube in their video:
-// "HOW TO MAKE HEART/HEALTH SYSTEM - UNITY TUTORIAL"
 
 public class StatsDisplay : MonoBehaviour
 {
