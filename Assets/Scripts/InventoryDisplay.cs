@@ -21,7 +21,16 @@ public class InventoryDisplay : MonoBehaviour
     {
         for(int i = 0; i < slots.Length; i++)
         {
-            if(i < inventory.items.Count)
+            if (inventory.items.Count == 0)
+            {
+                emptyInvText.SetActive(true);
+            }
+            else
+            {
+                emptyInvText.SetActive(false);
+            }
+
+            if (i < inventory.items.Count)
             {
                 slots[i].gameObject.SetActive(true);
                 slots[i].UpdateItemDisplay(inventory.items[i].itemType.icon, i);
@@ -30,15 +39,6 @@ public class InventoryDisplay : MonoBehaviour
             {
                 slots[i].gameObject.SetActive(false);
             }
-        }
-
-        if(inventory.items.Count == 0)
-        {
-            emptyInvText.SetActive(true);
-        }
-        else
-        {
-            emptyInvText.SetActive(false);
         }
     }
 

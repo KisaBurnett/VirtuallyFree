@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scraps
   m_EditorClassIdentifier: 
   itemName: Meaty Scraps
-  icon: {fileID: 0}
+  icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   description: Just some scraps of skin. Not even tasty when fried.
   hungerMin: 1
   hungerMax: 2

@@ -6,9 +6,17 @@ public class EnemyStats : MonoBehaviour
 {
     public int enemyHP;
     public int enemyDamage;
+    public Inventory inventory;
     public bool isHit;
-    SpriteRenderer sprite;
+    public ItemInstance scraps;
+    public ItemInstance fat;
+    public ItemInstance drumstick;
+
+    [SerializeField] int dropChanceMax;
+    [SerializeField] int dropChanceMin;
+    private SpriteRenderer sprite;
     private Collider2D enemyCollider;
+    private int itemPick;
 
     private void Awake()
     {
@@ -37,6 +45,31 @@ public class EnemyStats : MonoBehaviour
         if(enemyHP <= 0)
         {
             Destroy(gameObject, .5f);
+            // Drop item
+            if(dropChanceMax < 0)
+            {
+                dropChanceMax = 5;
+            }
+            if (dropChanceMin < 0)
+            {
+                dropChanceMin = 1;
+            }
+
+            itemPick = Random.Range(dropChanceMin, dropChanceMax);
+
+            if(itemPick == 0)
+            {
+                inventory.AddItem(drumstick);
+                Debug.Log("Jackpot!");
+            } else if((itemPick % 2) == 0)
+            {
+                inventory.AddItem(scraps);
+                Debug.Log("It's even!");
+            } else
+            {
+                inventory.AddItem(fat);
+                Debug.Log("It's odd!");
+            }
         }
     }
 
