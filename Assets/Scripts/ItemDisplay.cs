@@ -30,7 +30,17 @@ public class ItemDisplay : MonoBehaviour
     {
         //Debug.Log(hunger.ToString());
         PlayerStats.Instance.hunger += hunger;
+        if (PlayerStats.Instance.hunger > 8)
+        {
+            PlayerStats.Instance.hunger = 8;
+        }
+
         PlayerStats.Instance.hygiene -= 1;
+        if (PlayerStats.Instance.hygiene < 0)
+        {
+            PlayerStats.Instance.hygiene = 0;
+        }
+
         //Debug.Log(PlayerStats.Instance.hunger.ToString());
         invntryDisplay.RemoveItem(itemIndex);
     }
