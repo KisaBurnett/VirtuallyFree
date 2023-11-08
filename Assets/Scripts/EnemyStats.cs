@@ -8,9 +8,9 @@ public class EnemyStats : MonoBehaviour
     public int enemyDamage;
     public Inventory inventory;
     public bool isHit;
-    public ItemInstance scraps;
-    public ItemInstance fat;
-    public ItemInstance drumstick;
+    public ItemData scraps;
+    public ItemData fat;
+    public ItemData drumstick;
 
     [SerializeField] int dropChanceMax;
     [SerializeField] int dropChanceMin;
@@ -45,8 +45,21 @@ public class EnemyStats : MonoBehaviour
         if(enemyHP <= 0)
         {
             Destroy(gameObject, .5f);
-            // Drop item
-            if(dropChanceMax < 0)
+
+            PlayerStats.Instance.happiness -= 1;
+            if(PlayerStats.Instance.happiness < 0)
+            {
+                PlayerStats.Instance.happiness = 0;
+            }
+
+            PlayerStats.Instance.enemiesKilled += 1;
+
+            if(PlayerStats.Instance.enemiesKilled >= PlayerStats.Instance.toLevel)
+            {
+                PlayerStats.Instance.level += 1;
+            }
+
+            if (dropChanceMax < 0)
             {
                 dropChanceMax = 5;
             }
@@ -59,16 +72,16 @@ public class EnemyStats : MonoBehaviour
 
             if(itemPick == 0)
             {
-                inventory.AddItem(drumstick);
-                Debug.Log("Jackpot!");
+                ItemInstance toAdd = new ItemInstance(drumstick);
+                inventory.AddItem(toAdd);
             } else if((itemPick % 2) == 0)
             {
-                inventory.AddItem(scraps);
-                Debug.Log("It's even!");
+                ItemInstance toAdd = new ItemInstance(scraps);
+                inventory.AddItem(toAdd);
             } else
             {
-                inventory.AddItem(fat);
-                Debug.Log("It's odd!");
+                ItemInstance toAdd = new ItemInstance(fat);
+                inventory.AddItem(toAdd);
             }
         }
     }

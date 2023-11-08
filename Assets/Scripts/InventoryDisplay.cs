@@ -33,7 +33,7 @@ public class InventoryDisplay : MonoBehaviour
             if (i < inventory.items.Count)
             {
                 slots[i].gameObject.SetActive(true);
-                slots[i].UpdateItemDisplay(inventory.items[i].itemType.icon, i);
+                slots[i].UpdateItemDisplay(inventory.items[i].itemType.icon, i, inventory.items[i].itemType.description, inventory.items[i].itemType.name, inventory.items[i].hungerValue);
             }
             else
             {

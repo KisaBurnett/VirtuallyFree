@@ -218,14 +218,8 @@ MonoBehaviour:
   enemyDamage: 2
   inventory: {fileID: 11400000, guid: bbcbc3a2566c3044b848c6f8455aef68, type: 2}
   isHit: 0
-  scraps:
-    itemType: {fileID: 11400000, guid: 3303007fa99483347be01f09109b042e, type: 2}
-    hungerValue: 0
-  fat:
-    itemType: {fileID: 11400000, guid: 5ef837670a8953a40b72c3179d6a5c05, type: 2}
-    hungerValue: 0
-  drumstick:
-    itemType: {fileID: 11400000, guid: 2db15cdec2680f944987696495716630, type: 2}
-    hungerValue: 0
+  scraps: {fileID: 11400000, guid: 3303007fa99483347be01f09109b042e, type: 2}
+  fat: {fileID: 11400000, guid: 5ef837670a8953a40b72c3179d6a5c05, type: 2}
+  drumstick: {fileID: 11400000, guid: 2db15cdec2680f944987696495716630, type: 2}
   dropChanceMax: 5
   dropChanceMin: 1

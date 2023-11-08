@@ -34,4 +34,17 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    // Go Home from hunting.
+    public void ReturnHunt()
+    {
+        PlayerStats.Instance.hygiene -= 3;
+
+        if(PlayerStats.Instance.hygiene < 0)
+        {
+            PlayerStats.Instance.hygiene = 0;
+        }
+
+        GoHome();
+    }
 }

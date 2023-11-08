@@ -1544,9 +1544,10 @@ MonoBehaviour:
   hunger: 8
   happiness: 8
   hygiene: 8
-  drainHungerSpeed: 5
-  drainHappySpeed: 10
+  drainHungerSpeed: 60
+  drainHappySpeed: 120
   level: 1
+  playerHP: 20
   notPaused: 0
   isDead: 0
   isDepressed: 0
@@ -2700,6 +2701,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1309436364}
+  - {fileID: 1212501427}
   - {fileID: 1699184072}
   - {fileID: 1401770666}
-  - {fileID: 1212501427}

@@ -840,7 +840,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1919270325}
         m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: GoHome
+        m_MethodName: ReturnHunt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1256,9 +1256,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 439506297}
-  - {fileID: 1919270324}
-  - {fileID: 1205488070}
   - {fileID: 1264900658}
   - {fileID: 2344451038004163644}
   - {fileID: 616069883}
   - {fileID: 146273440399755728}
+  - {fileID: 1919270324}
+  - {fileID: 1205488070}

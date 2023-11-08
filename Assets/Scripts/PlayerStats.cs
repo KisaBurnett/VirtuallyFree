@@ -13,6 +13,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] int drainHappySpeed = 120;
     public int level = 1;
     public int playerHP = 20;
+    public int toLevel = 5;
+    public int enemiesKilled = 0;
 
     public bool notPaused = false;
     public bool isDead = false;
@@ -39,7 +41,7 @@ public class PlayerStats : MonoBehaviour
     IEnumerator DrainHungerRoutine()
     {
         while (true)
-        {
+        { 
             // Debug.Log("Hunger coroutine started!");
             yield return new WaitForSeconds(drainHungerSpeed);
 
