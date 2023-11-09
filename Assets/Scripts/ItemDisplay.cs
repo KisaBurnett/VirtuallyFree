@@ -10,10 +10,14 @@ using TMPro;
 public class ItemDisplay : MonoBehaviour
 {
     public int itemIndex;
+
     public Image image;
+
     public InventoryDisplay invntryDisplay;
+
     public TextMeshProUGUI itemText;
     public TextMeshProUGUI itemName;
+
     int hunger;
 
 

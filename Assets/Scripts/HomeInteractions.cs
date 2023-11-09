@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class HomeInteractions : MonoBehaviour
 {
-    [SerializeField] GameObject statsPanel;
-    [SerializeField] GameObject eatMenu;
     [SerializeField] GameObject alertText;
+    [SerializeField] GameObject eatMenu;
+    [SerializeField] GameObject statsPanel;
 
     [SerializeField] int alertNum;
 

@@ -8,13 +8,23 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    private float coolDownTime;
+    public int damage;
+
+    public float attackRange;
     public float startCoolDown;
+    
+    public LayerMask enemies;
 
     public Transform attackPos;
-    public float attackRange;
-    public LayerMask enemies;
-    public int damage;
+
+    private float coolDownTime;
+
+    private SpriteRenderer sprite;
+
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
@@ -42,5 +52,21 @@ public class PlayerCombat : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(DamageBlink());
+    }
+
+    IEnumerator DamageBlink()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            sprite.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            sprite.color = Color.black;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

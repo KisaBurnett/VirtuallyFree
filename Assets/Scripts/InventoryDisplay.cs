@@ -8,9 +8,9 @@ using UnityEngine.UI;
 
 public class InventoryDisplay : MonoBehaviour
 {
+    public GameObject emptyInvText;
     public Inventory inventory;
     public ItemDisplay[] slots;
-    public GameObject emptyInvText;
 
     private void Start()
     {

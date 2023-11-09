@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class StateAI : MonoBehaviour
 {
-    public PhysicsMovement movement;
-    public Transform targetTransform;
-    public EnemyStats enemyInfo;
-    public float viewRadius;
-    AIState currentState;
-
-    GameObject targetObject;
-
     public AIStateWait waitState;
     public AIStatePatrol patrolState;
     public AIStateChase chaseState;
+
+    public EnemyStats enemyInfo;
+    public float viewRadius;
+    public PhysicsMovement movement;
+    public Transform targetTransform;
+    
+    AIState currentState;
+
+    GameObject targetObject;
+      
 
     void Start()
     {

@@ -9,16 +9,16 @@ public class PlayerStats : MonoBehaviour
     public int hunger = 8;
     public int happiness = 8;
     public int hygiene = 8;
-    [SerializeField] int drainHungerSpeed = 60;
-    [SerializeField] int drainHappySpeed = 120;
     public int level = 1;
-    public int playerHP = 20;
     public int toLevel = 5;
     public int enemiesKilled = 0;
 
     public bool notPaused = false;
     public bool isDead = false;
     public bool isDepressed = false;
+
+    [SerializeField] int drainHungerSpeed = 60;
+    [SerializeField] int drainHappySpeed = 120;
 
     private void Awake()
     {

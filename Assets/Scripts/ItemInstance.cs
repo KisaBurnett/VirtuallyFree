@@ -8,9 +8,9 @@ using UnityEngine;
 [System.Serializable]
 public class ItemInstance
 {
-    public ItemData itemType;
     public int hungerValue;
-
+    public ItemData itemType;
+    
     public ItemInstance(ItemData itemData)
     {
         itemType = itemData;

@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
+    public bool isHit;
+
     public int enemyHP;
     public int enemyDamage;
+
     public Inventory inventory;
-    public bool isHit;
+
     public ItemData scraps;
     public ItemData fat;
     public ItemData drumstick;
 
     [SerializeField] int dropChanceMax;
     [SerializeField] int dropChanceMin;
-    private SpriteRenderer sprite;
+
+    CombatScore plyrHp;
+    GameObject hpTracker;
+
     private Collider2D enemyCollider;
+
     private int itemPick;
+
+    private SpriteRenderer sprite;
 
     private void Awake()
     {
@@ -24,15 +33,20 @@ public class EnemyStats : MonoBehaviour
         enemyCollider = GetComponent<Collider2D>();
         isHit = false;
     }
+    private void Start()
+    {
+        hpTracker = GameObject.FindWithTag("Score");
+        plyrHp = hpTracker.GetComponent<CombatScore>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            if(PlayerStats.Instance.playerHP > 0)
+            if(plyrHp.playerHP > 0)
             {
-                PlayerStats.Instance.playerHP -= enemyDamage;
-                Debug.Log(PlayerStats.Instance.playerHP.ToString());
+                plyrHp.playerHP -= enemyDamage;
+                Debug.Log(plyrHp.playerHP.ToString());
             }
         }
     }
@@ -53,6 +67,7 @@ public class EnemyStats : MonoBehaviour
             }
 
             PlayerStats.Instance.enemiesKilled += 1;
+            plyrHp.enemiesKilled += 1;
 
             if(PlayerStats.Instance.enemiesKilled >= PlayerStats.Instance.toLevel)
             {

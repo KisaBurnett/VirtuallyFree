@@ -1548,6 +1548,8 @@ MonoBehaviour:
   drainHappySpeed: 120
   level: 1
   playerHP: 20
+  toLevel: 5
+  enemiesKilled: 0
   notPaused: 0
   isDead: 0
   isDepressed: 0
