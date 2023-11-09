@@ -31,4 +31,9 @@ public class Inventory : ScriptableObject
         Debug.Log("No inventory space!");
         return false;
     }
+
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
 }

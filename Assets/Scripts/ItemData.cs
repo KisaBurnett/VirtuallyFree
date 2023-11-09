@@ -14,4 +14,9 @@ public class ItemData : ScriptableObject
     public string description;
     public int hungerMin;
     public int hungerMax;
+
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
 }

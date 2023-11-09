@@ -52,7 +52,6 @@ public class CombatScore : MonoBehaviour
         {
             endText.text = "you shall feast on flesh tonight!";
             spawner.SetActive(false);
-            digi.SetActive(false);
             endScreen.SetActive(true);
         }
     }
