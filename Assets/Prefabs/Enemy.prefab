@@ -167,7 +167,7 @@ MonoBehaviour:
   movement: {fileID: 0}
   targetTransform: {fileID: 0}
   enemyInfo: {fileID: 0}
-  viewRadius: 7
+  viewRadius: 4
 --- !u!114 &5121975473972394834
 MonoBehaviour:
   m_ObjectHideFlags: 0

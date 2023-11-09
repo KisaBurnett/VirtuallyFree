@@ -20,7 +20,7 @@ public class GameTimer : MonoBehaviour
     {
         timerOn = true;
         gameOver.SetActive(false);
-        spawner.SetActive(true);
+        spawner.GetComponent<ProjectileSpawner>().gameOver = false;
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class GameTimer : MonoBehaviour
                 timeRemaining = 0;
                 timerOn = false;
                 gameOver.SetActive(true);
-                spawner.SetActive(false);
+                spawner.GetComponent<ProjectileSpawner>().gameOver = true;
                 gameOver.GetComponent<HappinessIncreaser>().IncreaseHappiness();
             }
         }
