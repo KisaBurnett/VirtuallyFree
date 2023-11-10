@@ -17,6 +17,7 @@ public class CombatScore : MonoBehaviour
     
     public TextMeshProUGUI endText;
     public TextMeshProUGUI hpRemaining;
+    public TextMeshProUGUI notification;
     
     // Start is called before the first frame update
     void Start()
@@ -54,5 +55,19 @@ public class CombatScore : MonoBehaviour
             spawner.SetActive(false);
             endScreen.SetActive(true);
         }
+    }
+
+    public void LevelUp()
+    {
+        StartCoroutine(MessageFlash());
+    }
+
+    IEnumerator MessageFlash()
+    {
+        notification.text = "You leveled up!";
+
+        yield return new WaitForSeconds(5);
+
+        notification.text = " ";
     }
 }

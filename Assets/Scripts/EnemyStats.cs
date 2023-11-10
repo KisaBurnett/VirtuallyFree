@@ -72,6 +72,8 @@ public class EnemyStats : MonoBehaviour
             if(PlayerStats.Instance.enemiesKilled >= PlayerStats.Instance.toLevel)
             {
                 PlayerStats.Instance.level += 1;
+                PlayerStats.Instance.enemiesKilled = 0;
+                plyrHp.LevelUp();
             }
 
             if (dropChanceMax < 0)
