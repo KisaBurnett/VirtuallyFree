@@ -46,7 +46,7 @@ public class EnemyStats : MonoBehaviour
             if(plyrHp.playerHP > 0)
             {
                 plyrHp.playerHP -= enemyDamage;
-                Debug.Log(plyrHp.playerHP.ToString());
+                //Debug.Log(plyrHp.playerHP.ToString());
             }
         }
     }

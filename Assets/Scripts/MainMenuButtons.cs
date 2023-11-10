@@ -12,7 +12,7 @@ public class MainMenuButtons : MonoBehaviour
     // Pause the drain timer.
     public void Start()
     {
-        if (PlayerStats.Instance.notPaused)
+        if (PlayerStats.Instance.notPaused == true)
         {
             PlayerStats.Instance.notPaused = false;
         }

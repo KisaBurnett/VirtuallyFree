@@ -17,7 +17,7 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("PlaytimeScene");
     }
 
-    // Go to the Explore scene.
+    // Go to the Explore scene and escape the game.
     public void GoExplore()
     {
         SceneManager.LoadScene("ExploreScene");

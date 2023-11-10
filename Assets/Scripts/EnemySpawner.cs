@@ -28,12 +28,12 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies()
     {
-        if (PlayerStats.Instance.level < 5)
+        if (PlayerStats.Instance.level < 2)
         {
             waves = 2;
             enemiesPerWave = 1;
         }
-        else if (PlayerStats.Instance.level < 10)
+        else if (PlayerStats.Instance.level < 5)
         {
             waves = 2;
             enemiesPerWave = 2;

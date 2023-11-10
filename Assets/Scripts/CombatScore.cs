@@ -22,11 +22,11 @@ public class CombatScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(PlayerStats.Instance.level < 5)
+        if(PlayerStats.Instance.level < 2)
         {
             playerHP = 20;
         }
-        else if (PlayerStats.Instance.level < 10)
+        else if (PlayerStats.Instance.level < 5)
         {
             playerHP = 30;
         }

@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class HomeInteractions : MonoBehaviour
 {
     [SerializeField] GameObject alertText;
+    [SerializeField] GameObject digiBath;
+    [SerializeField] GameObject digiIdle;
     [SerializeField] GameObject eatMenu;
+    [SerializeField] GameObject escapeButton;
     [SerializeField] GameObject statsPanel;
 
     [SerializeField] int alertNum;
@@ -29,9 +32,14 @@ public class HomeInteractions : MonoBehaviour
     // Start the drain timer.
     public void Start()
     {
-        if (!PlayerStats.Instance.notPaused)
+        if (PlayerStats.Instance.notPaused == false)
         {
             PlayerStats.Instance.notPaused = true;
+        }
+
+        if(PlayerStats.Instance.level >= 10)
+        {
+            escapeButton.SetActive(true);
         }
     }
 
@@ -51,7 +59,9 @@ public class HomeInteractions : MonoBehaviour
     // PLACEHOLDER Bring up cleaning menu.
     public void CleanUp()
     {
-        Debug.Log("I'm cleaning now!");
+        PlayerStats.Instance.hygiene = 8;
+        StartCoroutine(BathRoutine());
+        //Debug.Log("I'm cleaning now!");
     }
 
     // Bring up the information UI.
@@ -64,5 +74,16 @@ public class HomeInteractions : MonoBehaviour
     public void CloseInfo()
     {
         statsPanel.SetActive(false);
+    }
+
+    IEnumerator BathRoutine()
+    {
+        digiIdle.SetActive(false);
+        digiBath.SetActive(true);
+
+        yield return new WaitForSeconds(4);
+
+        digiBath.SetActive(false);
+        digiIdle.SetActive(true);
     }
 }
