@@ -3,6 +3,10 @@ UTSA CS-4423-001 Game Development Final Project
 
 Digi, a virtual pet, is living in an ownerless world, surrounded by feral and starving pets who have also been abandoned. Help Digi develop the strength and will to find true freedom. Teach Digi to manage hunger, happiness, and hygiene levels by collecting food, playing a solo game, and taking baths.
 
+Menu and home controls: Point-and-click
+Combat controls: WASD to move, spacebar to use weapon
+Playtime controls: A and D to move
+
 External asset credits:
 
 - "Pixel Adventure 1" by Pixel Frog on the Unity Asset Store
