@@ -1,11 +1,11 @@
 # VirtuallyFree
-UTSA CS-4423-001 Game Development Fall 2023 Final Project by Kisa Burnett
+UTSA CS-4423-001 Game Development Fall 2023 Final Project by Kisa Burnett  
 
-Digi, a virtual pet, is living in an ownerless world, surrounded by feral and starving pets who have also been abandoned. Help Digi develop the strength and will to find true freedom. Teach Digi to manage hunger, happiness, and hygiene levels by collecting food, playing a solo game, and taking baths.
+Digi, a virtual pet, is living in an ownerless world, surrounded by feral and starving pets who have also been abandoned. Help Digi develop the strength and will to find true freedom. Teach Digi to manage hunger, happiness, and hygiene levels by collecting food, playing a solo game, and taking baths.  
 
-Menu and home controls: Point-and-click
-Combat controls: WASD to move, spacebar to use weapon
-Playtime controls: A and D to move
+Menu and home controls: Point-and-click  
+Combat controls: WASD to move, spacebar to use weapon  
+Playtime controls: A and D to move  
 
 External asset credits:
 
