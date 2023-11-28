@@ -50,6 +50,11 @@ public class EnemySpawner : MonoBehaviour
 
         IEnumerator SpawnProjectilesOverTimeRoutine()
         {
+            if(PlayerStats.Instance.completedHuntTutorial == false)
+            {
+                yield return new WaitForSeconds(5);
+            }
+            
             for (int i = 0; i < waves; i++)
             {
                 for(int j = 0; j < enemiesPerWave; j++)

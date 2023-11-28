@@ -78,9 +78,15 @@ public class CombatScore : MonoBehaviour
 
     IEnumerator TutorialFlash()
     {
+        notification.text = "these pets have been without owners so long they've gone feral!\nkill them before they kill you!";
+
+        yield return new WaitForSeconds(5);
+
+        PlayerStats.Instance.completedHuntTutorial = true;
+
         notification.text = "use wasd to move digi\npress spacebar to swing weapon";
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         notification.text = " ";
     }
