@@ -2685,9 +2685,16 @@ MonoBehaviour:
   hygiene: 8
   level: 1
   enemiesKilled: 0
+  inventory: {fileID: 11400000, guid: bbcbc3a2566c3044b848c6f8455aef68, type: 2}
   notPaused: 0
   isDead: 0
   isDepressed: 0
+  completedHomeTutorial: 0
+  completedStatsTutorial: 0
+  completedHuntTutorial: 0
+  completedEatTutorial: 0
+  completedBathTutorial: 0
+  completedPlayTutorial: 0
 --- !u!1 &1231471906
 GameObject:
   m_ObjectHideFlags: 0

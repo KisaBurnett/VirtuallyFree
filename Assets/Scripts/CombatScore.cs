@@ -22,6 +22,11 @@ public class CombatScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(PlayerStats.Instance.completedHuntTutorial == false)
+        {
+            StartCoroutine(TutorialFlash());
+        }
+        
         if(PlayerStats.Instance.level < 2)
         {
             playerHP = 20;
@@ -67,6 +72,15 @@ public class CombatScore : MonoBehaviour
         notification.text = "You leveled up!";
 
         yield return new WaitForSeconds(5);
+
+        notification.text = " ";
+    }
+
+    IEnumerator TutorialFlash()
+    {
+        notification.text = "use wasd to move digi\npress spacebar to swing weapon";
+
+        yield return new WaitForSeconds(10);
 
         notification.text = " ";
     }

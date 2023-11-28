@@ -19,9 +19,24 @@ public class PlayerStats : MonoBehaviour
     public int level = 1;
     public int enemiesKilled = 0;
 
+    public Inventory inventory;
+
     public bool notPaused = false;
     public bool isDead = false;
     public bool isDepressed = false;
+
+    // Triggered by first visit to home screen.
+    public bool completedHomeTutorial = false;
+    // Triggered by opening stats menu the first time.
+    public bool completedStatsTutorial = false;
+    // Triggered by first warning alert.
+    public bool completedAlertTutorial = false;
+    // Triggered by visiting the hunt scene the first time.
+    public bool completedHuntTutorial = false;
+    // Triggered by returning from hunt scene the first time.
+    public bool completedEatTutorial = false;
+    // Triggered by visiting the play scene the first time.
+    public bool completedPlayTutorial = false;
 
     // For restarting upon death, etc.
     int startStats = 8;
@@ -52,6 +67,12 @@ public class PlayerStats : MonoBehaviour
         hygiene = startStats;
         level = startLevel;
         enemiesKilled = 0;
+        completedEatTutorial = false;
+        completedHomeTutorial = false;
+        completedAlertTutorial = false;
+        completedHuntTutorial = false;
+        completedPlayTutorial = false;
+        inventory.items.Clear();
     }
 
     IEnumerator DrainHungerRoutine()

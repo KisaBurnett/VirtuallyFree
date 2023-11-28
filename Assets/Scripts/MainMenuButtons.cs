@@ -84,6 +84,7 @@ public class MainMenuButtons : MonoBehaviour
     // Quit the game.
     public void QuitGame()
     {
+        PlayerStats.Instance.ResetStats();
         Application.Quit();
     }
 }

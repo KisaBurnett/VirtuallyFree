@@ -10,9 +10,14 @@ using TMPro;
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] float timeRemaining;
+
     [SerializeField] GameObject gameOver;
     [SerializeField] GameObject spawner;
+
+    [SerializeField] TextMeshProUGUI notification;
+
     public bool timerOn = false;
+
     public TextMeshProUGUI timerText;
 
     // Start is called before the first frame update
@@ -21,6 +26,12 @@ public class GameTimer : MonoBehaviour
         timerOn = true;
         gameOver.SetActive(false);
         spawner.GetComponent<ProjectileSpawner>().gameOver = false;
+
+        if(PlayerStats.Instance.completedPlayTutorial == false)
+        {
+            StartCoroutine(TutorialFlash());
+            PlayerStats.Instance.completedPlayTutorial = true;
+        }
     }
 
     // Update is called once per frame
@@ -36,9 +47,9 @@ public class GameTimer : MonoBehaviour
             {
                 timeRemaining = 0;
                 timerOn = false;
+                gameOver.SetActive(true);
                 spawner.GetComponent<ProjectileSpawner>().gameOver = true;
                 gameOver.GetComponent<HappinessIncreaser>().IncreaseHappiness();
-                gameOver.SetActive(true);
             }
         }
     }
@@ -51,5 +62,14 @@ public class GameTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    IEnumerator TutorialFlash()
+    {
+        notification.text = "use a and d to move digi\ncollect stars, but avoid bones";
+
+        yield return new WaitForSeconds(10);
+
+        notification.text = " ";
     }
 }

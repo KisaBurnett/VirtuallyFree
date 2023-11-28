@@ -56,7 +56,10 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(DamageBlink());
+        if (collision.gameObject.tag == "Enemy")
+        {
+            StartCoroutine(DamageBlink());
+        }
     }
 
     IEnumerator DamageBlink()
