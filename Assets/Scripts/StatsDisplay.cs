@@ -6,16 +6,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StatsDisplay : MonoBehaviour
 {
     [SerializeField] Image[] hungerBlocks;
     [SerializeField] Image[] happyBlocks;
     [SerializeField] Image[] hygieneBlocks;
+    [SerializeField] TextMeshProUGUI levelDisplay;
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        levelDisplay.text = PlayerStats.Instance.level.ToString();
+        
         for (int i = 0; i < hungerBlocks.Length; i++)
         {
             if(i < PlayerStats.Instance.hunger)
