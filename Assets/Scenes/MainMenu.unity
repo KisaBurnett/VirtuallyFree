@@ -2691,9 +2691,9 @@ MonoBehaviour:
   isDepressed: 0
   completedHomeTutorial: 0
   completedStatsTutorial: 0
+  completedAlertTutorial: 0
   completedHuntTutorial: 0
   completedEatTutorial: 0
-  completedBathTutorial: 0
   completedPlayTutorial: 0
 --- !u!1 &1231471906
 GameObject:
