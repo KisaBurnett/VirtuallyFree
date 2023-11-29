@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535627680199630191, guid: f94954c33c67d6541bfa66999f23412d, type: 3}
       propertyPath: enemyHP
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2535627680199630191, guid: f94954c33c67d6541bfa66999f23412d, type: 3}
       propertyPath: enemyDamage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2535627680199630191, guid: f94954c33c67d6541bfa66999f23412d, type: 3}
       propertyPath: dropChanceMax
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5121975473972394834, guid: f94954c33c67d6541bfa66999f23412d, type: 3}
       propertyPath: charSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -60,12 +60,6 @@ public class EnemyStats : MonoBehaviour
         {
             Destroy(gameObject, .5f);
 
-            PlayerStats.Instance.happiness -= 1;
-            if(PlayerStats.Instance.happiness < 0)
-            {
-                PlayerStats.Instance.happiness = 0;
-            }
-
             PlayerStats.Instance.enemiesKilled += 1;
             plyrHp.enemiesKilled += 1;
 

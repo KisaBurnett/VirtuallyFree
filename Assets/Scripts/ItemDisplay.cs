@@ -39,6 +39,12 @@ public class ItemDisplay : MonoBehaviour
             PlayerStats.Instance.hunger = 8;
         }
 
+        PlayerStats.Instance.happiness -= 1;
+        if (PlayerStats.Instance.happiness < 0)
+        {
+            PlayerStats.Instance.happiness = 0;
+        }
+
         PlayerStats.Instance.hygiene -= 1;
         if (PlayerStats.Instance.hygiene < 0)
         {

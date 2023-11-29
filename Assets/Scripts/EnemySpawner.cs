@@ -73,9 +73,9 @@ public class EnemySpawner : MonoBehaviour
                     }
                     else if(PlayerStats.Instance.level < 10)
                     {
-                        pick = Random.Range(1, 2);
+                        pick = Random.Range(1, 3);
 
-                        if(pick == 1)
+                        if(pick < 2)
                         {
                             Instantiate(enemy1, new Vector3(current, 4, 0), Quaternion.identity);
                         }
@@ -86,13 +86,13 @@ public class EnemySpawner : MonoBehaviour
                     }
                     else
                     {
-                        pick = Random.Range(1, 3);
+                        pick = Random.Range(1, 4);
 
-                        if (pick == 1)
+                        if ((pick >= 1) && (pick < 2))
                         {
                             Instantiate(enemy1, new Vector3(current, 4, 0), Quaternion.identity);
                         }
-                        else if(pick == 2)
+                        else if((pick >= 2) && (pick < 3))
                         {
                             Instantiate(enemy2, new Vector3(current, 4, 0), Quaternion.identity);
                         }
