@@ -50,7 +50,7 @@ External asset credits:
 - "beep2.wav" by thisusernameis on freesound.org
   - https://freesound.org/people/thisusernameis/sounds/426890/
 - "digital loop.wav" by RichHeard on freesound.org
-  -https://freesound.org/people/RichHeard/sounds/444825/
+  - https://freesound.org/people/RichHeard/sounds/444825/
 - "Arcade Music Loop" by joshuaempyre on freesound.org
   - https://freesound.org/people/joshuaempyre/sounds/251461/
 - "background music loop" by gis_sweden on freesound.org
