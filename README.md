@@ -47,3 +47,13 @@ External asset credits:
   - https://freesound.org/people/guitarman213/sounds/707897/
 - "Sad Days" by pholosho_seloane on freesound.og
   - https://freesound.org/people/pholosho_seloane/sounds/688887/
+- "beep2.wav" by thisusernameis on freesound.org
+  - https://freesound.org/people/thisusernameis/sounds/426890/
+- "digital loop.wav" by RichHeard on freesound.org
+  -https://freesound.org/people/RichHeard/sounds/444825/
+- "Arcade Music Loop" by joshuaempyre on freesound.org
+  - https://freesound.org/people/joshuaempyre/sounds/251461/
+- "background music loop" by gis_sweden on freesound.org
+  - https://freesound.org/people/gis_sweden/sounds/651797/
+- "sloth" by Seth_Makes_Sounds on freesound.org
+  - https://freesound.org/people/Seth_Makes_Sounds/sounds/680563/
