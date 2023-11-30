@@ -48,6 +48,10 @@ public class HomeInteractions : MonoBehaviour
         {
             escapeButton.SetActive(true);
         }
+        else
+        {
+            escapeButton.SetActive(false);
+        }
     }
 
     // PLACEHOLDER Bring up eating menu.

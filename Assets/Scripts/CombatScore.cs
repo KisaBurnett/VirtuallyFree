@@ -69,7 +69,7 @@ public class CombatScore : MonoBehaviour
 
     IEnumerator MessageFlash()
     {
-        notification.text = "You leveled up!\nyour max hp is higher and enemy waves will be bigger";
+        notification.text = "You leveled up!\nyour max hp is higher and enemy waves may be bigger";
 
         yield return new WaitForSeconds(5);
 

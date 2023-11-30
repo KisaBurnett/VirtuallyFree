@@ -55,7 +55,7 @@ public class HappinessIncreaser : MonoBehaviour
             endMessage.text = "Life isn't so bad after all!";
             PlayerStats.Instance.happiness += 4;
         }
-        else if (endScore <= 25)
+        else if (endScore > 20)
         {
             // Message is ecstatic
             endMessage.text = "The guilt of slaughtering kindred is gone!";

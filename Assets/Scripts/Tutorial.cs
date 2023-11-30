@@ -21,6 +21,10 @@ public class Tutorial : MonoBehaviour
             tutorialText.text = "great! you have collected meat!\ntry not to think about how you did it.\nclick \"eat\" to see what you have.\ndon\'t forget to take a bath!";
             PlayerStats.Instance.completedEatTutorial = true;
         }
+        else if(PlayerStats.Instance.level == 10)
+        {
+            tutorialText.text = "what\'s this? a new menu option?\ndigi is now strong enough to fend for himself!\nhelp him escape from this confined nightmare!";
+        }
         else
         {
             tutorialText.text = " ";

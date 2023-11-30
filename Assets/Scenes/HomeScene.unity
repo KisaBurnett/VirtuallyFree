@@ -4025,7 +4025,7 @@ MonoBehaviour:
   digiBath: {fileID: 1025950993}
   digiIdle: {fileID: 216195428}
   eatMenu: {fileID: 1583621028}
-  escapeButton: {fileID: 0}
+  escapeButton: {fileID: 1308899300}
   statsPanel: {fileID: 463510855}
   tutorialText: {fileID: 1860147277}
   alertNum: 2
@@ -9641,7 +9641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: 367.08}
+  m_AnchoredPosition: {x: 0.000011444, y: 337.91}
   m_SizeDelta: {x: 1815.4507, y: 287.6956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860147277
