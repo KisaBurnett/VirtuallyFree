@@ -8,8 +8,6 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public int damage;
-
     public float attackRange;
     public float startCoolDown;
     
@@ -19,10 +17,25 @@ public class PlayerCombat : MonoBehaviour
 
     private float coolDownTime;
 
+    private int damage;
+
     private SpriteRenderer sprite;
 
     private void Start()
     {
+        if (PlayerStats.Instance.level <= 5)
+        {
+            damage = 2;
+        }
+        else if (PlayerStats.Instance.level <= 10)
+        {
+            damage = 5;
+        }
+        else if(PlayerStats.Instance.level > 10)
+        {
+            damage = 7;
+        }
+
         sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -33,6 +46,7 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 coolDownTime = startCoolDown;
+                this.GetComponent<AudioSource>().Play();
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemies);
                 for(int i = 0; i < enemiesToDamage.Length; i++)
                 {

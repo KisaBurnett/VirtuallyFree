@@ -49,7 +49,7 @@ public class GameTimer : MonoBehaviour
                 timerOn = false;
                 gameOver.SetActive(true);
                 spawner.GetComponent<ProjectileSpawner>().gameOver = true;
-                gameOver.GetComponent<HappinessIncreaser>().IncreaseHappiness();
+                this.GetComponent<HappinessIncreaser>().IncreaseHappiness();
             }
         }
     }

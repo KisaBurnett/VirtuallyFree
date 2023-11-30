@@ -5,10 +5,12 @@ using UnityEngine;
 public class ObstacleBehavior : MonoBehaviour
 {
     GameObject scoreCollector;
+    GameObject obstacleSFX;
 
     private void Start()
     {
         scoreCollector = GameObject.FindWithTag("Score");
+        obstacleSFX = GameObject.FindWithTag("BadSFX");
     }
 
     // Upon contact with player, subtract from score and destroy self
@@ -18,6 +20,7 @@ public class ObstacleBehavior : MonoBehaviour
         {
             scoreCollector.GetComponent<ScoreCollector>().score -= 1;
             scoreCollector.GetComponent<ScoreCollector>().ScoreAdd();
+            obstacleSFX.GetComponent<AudioSource>().Play();
         }
         Destroy(this.gameObject);
     }

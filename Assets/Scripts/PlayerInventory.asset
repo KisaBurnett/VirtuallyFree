@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   maxItems: 8
-  items:
-  - hungerValue: 2
-    itemType: {fileID: 11400000, guid: 5ef837670a8953a40b72c3179d6a5c05, type: 2}
+  items: []

@@ -48,7 +48,7 @@ public class CombatScore : MonoBehaviour
 
         if(playerHP <= 0)
         {
-            endText.text = "your kin ripped and tore you first!";
+            endText.text = "your kin ripped and tore you first!\nyour hp has reset";
             spawner.SetActive(false);
             digi.SetActive(false);
             endScreen.SetActive(true);
@@ -56,7 +56,7 @@ public class CombatScore : MonoBehaviour
 
         if(enemiesKilled == enemiesToKill)
         {
-            endText.text = "you shall feast on flesh tonight!";
+            endText.text = "you shall feast on flesh tonight!\nyour hp has reset";
             spawner.SetActive(false);
             endScreen.SetActive(true);
         }
@@ -69,7 +69,7 @@ public class CombatScore : MonoBehaviour
 
     IEnumerator MessageFlash()
     {
-        notification.text = "You leveled up!";
+        notification.text = "You leveled up!\nyour max hp is higher and enemy waves will be bigger";
 
         yield return new WaitForSeconds(5);
 

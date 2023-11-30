@@ -9,6 +9,19 @@ public class HappinessIncreaser : MonoBehaviour
     public TextMeshProUGUI endMessage;
     float endScore;
 
+    private void Start()
+    {
+        endMessage.text = " ";
+        if(PlayerStats.Instance.toLevel == 4)
+        {
+            PlayerStats.Instance.happiness += 1;
+        }
+        else if(PlayerStats.Instance.toLevel == 6)
+        {
+            PlayerStats.Instance.happiness += 2;
+        }
+    }
+
     public void IncreaseHappiness()
     {
         endScore = scoreCollector.GetComponent<ScoreCollector>().score;
@@ -27,13 +40,13 @@ public class HappinessIncreaser : MonoBehaviour
         else if(endScore <= 10)
         {
             // Message is a little happier
-            endMessage.text = "Not bad!";
+            endMessage.text = "Not great, but not bad!";
             PlayerStats.Instance.happiness += 2;
         }
         else if (endScore <= 15)
         {
             // Message is happy
-            endMessage.text = "Good job!";
+            endMessage.text = "Good job! This will take the edge off!";
             PlayerStats.Instance.happiness += 3;
         }
         else if (endScore <= 20)
